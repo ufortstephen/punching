@@ -99,12 +99,12 @@ body {
         left: 900px;
     }
     80% {
-        left: 1000px;
+        left: 900px;
     }
     90% {
-        left: 1300px;
+        left: 900px;
     }
     100% {
-        left: 1300px;
+        left: 900px;
     }
 }
