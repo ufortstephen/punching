@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--D\Font Awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <audio src="./audio/It__039_s_a_Fight_Three_6_Mafia_Naijapals.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
+    <div id="app">
+        <div id="game-begin" v-show="gameStart" class="">
+            <!--Punching bag-->
+            <div id="bag">
+                <div id="move-bag"></div>
+            </div>
+
+            <div id="game-section">
+                <!--Health Bar-->
+                <!--Controls-->
+                <div class="d-flex justify-content-between mx-5">
+                    <div id="left-hook" @click="leftHook" :class="{leftpunch : leftPunch}"></div>
+                    <div id="right-hook" @click="rightHook" :class="{rightpunch : rightPunch}"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-white text-center ready " v-show="quotePage">
+            <h3 class="quote">"Once the Bell rings you're on your own. Its just you and the other guy"</h3>
+            <img src="./images/ready-removebg-preview.png" alt="" @click="startGame">
+            <div> <button class="btn btn-dark">Click On The Gloves To Begin</button>
+                <audio src="./audio/boxing-bell.mp3" ref="audioBell"></audio>
+                <audio src="./audio/PUNCH.mp3" ref="punchSound"></audio>
+                <audio src="./audio/slap.mp3" ref="slap"></audio>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("my_audio").play();
+        }
+    </script>
+    <!--Vue JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- Optional JavaScript -->
+    <script src="main.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

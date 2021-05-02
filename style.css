@@ -1,0 +1,110 @@
+body {
+    background-color: rgba(0, 0, 0, 0.239);
+    background-blend-mode: overlay;
+    background-image: url(./images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.ready {
+    padding: 16rem 0;
+    width: max-content;
+    margin: 0px auto;
+}
+
+.ready img {
+    cursor: pointer;
+}
+
+.quote {
+    position: relative;
+}
+
+.quote::after {
+    content: "--Mohammed Ali";
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    color: #000;
+    font-style: oblique;
+    font-size: medium;
+}
+
+#move-bag {
+    width: 400px;
+    height: 500px;
+    background: url(./images/punch-removebg-preview.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    animation: movepunch 3s step-end 1s infinite;
+}
+
+#game-section {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#left-hook {
+    background: url(./images/new-left-removebg-preview.png) no-repeat;
+    background-size: 100%;
+    width: 300px;
+    height: 500px;
+}
+
+#right-hook {
+    background: url(./images/rem.png) no-repeat;
+    background-size: 100%;
+    width: 300px;
+    height: 500px;
+    margin-right: 90px;
+}
+
+.leftpunch {
+    transform: translateY(-80px) rotate(20deg);
+}
+
+.rightpunch {
+    transform: translateY(-80px) rotate(-20deg);
+}
+
+@keyframes movepunch {
+    0% {
+        left: 100;
+    }
+    10% {
+        left: 200px;
+    }
+    20% {
+        left: 300px;
+    }
+    20% {
+        left: 400px;
+    }
+    30% {
+        left: 500px;
+    }
+    40% {
+        left: 600px;
+    }
+    50% {
+        left: 700px;
+    }
+    60% {
+        left: 800px;
+    }
+    70% {
+        left: 900px;
+    }
+    80% {
+        left: 1000px;
+    }
+    90% {
+        left: 1300px;
+    }
+    100% {
+        left: 1900px;
+    }
+}
